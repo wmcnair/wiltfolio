@@ -1,43 +1,40 @@
 // Script Code
 $(document).ready(function() {
-    var topNav = $('header .navbar');
 
-    $(document).on('scroll', function(){
-        /*if ($(document).scrollTop() > 300) {
-            topNav.css('display','block').removeClass('navbar-dark bg-trans').addClass('navbar-light bg-light');
-        } else {
-            topNav.css('display','none');
-        }*/
-    });
-    
+    var topTxt = $('#home .intro');
+    var topWrap = $('#home .jumbotron-fluid');
+    var contactBtn = $("#contact button");
+
     $(window).resize(function(){
-        if ($(window).width() <= 640){
-            $("#contact button").html("&rtrif;");
-        }else{
-            $("#contact button").html("SEND");
+        if ($(window).width() <= 768){
+            contactBtn.html("&rtrif;");
+            topWrap.append(topTxt);
+        } else {
+            contactBtn.html("SEND");
+            topWrap.prepend(topTxt);
         }
+    });
 
-        /*if ($(window).width() <= 960){
-            topNav.css('display','block').removeClass('navbar-dark bg-trans').addClass('navbar-light bg-light');
-        }else{
-            topNav.css('display','none');
-        }*/
+    /*$(window).resize(function(){
+        if ($(window).width() <= 768){
+            contactBtn.html("&rtrif;");
+            //topNav.removeClass('navbar-dark bg-trans').addClass('navbar-light bg-light');
+        } else {
+            contactBtn.html("SEND");
+            //topNav.removeClass('navbar-light bg-light').addClass('navbar-dark bg-trans');
+        }
     });
     
-    /*$(window).resize(function(){
-        var element = $('#contact button');
-        var data = element.text();
-        var length = data.length;
-        var i = 0;
-        
-        if ($(window).width() <= 640){	
-            element.html("");
-            while (i < length) {
-              element.append(data.charAt(i) + "<br />")
-              i++;
-            }
+    $(document).on('scroll', function(){
+        if ($(document).scrollTop() > 300){
+            topNav.addClass('fixed-top').removeClass('navbar-dark bg-trans').addClass('navbar-light bg-light');
+        } else {
+            topNav.removeClass('fixed-top').removeClass('navbar-light bg-light').addClass('navbar-dark bg-trans');
         }
-    });*/
+    });
     
+    //$(".navbar-dark").sticky({topSpacing:0}); .addClass('fixed-top') .removeClass('fixed-top')*/
+
     
 }); //end document
+

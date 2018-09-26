@@ -5,7 +5,6 @@
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <?php include('form-handler.php'); ?>
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" type="text/css" href="style/bootstrap.min.css">
@@ -60,20 +59,20 @@
             <div class="row">
                 <div class="col-md-4">
                   <div class="me">
-                    <h5 class="card-title">St. Benedict Technology Consortium </h5>
-                    <a href="http://www.sbtcsupport.org/" target="_blank"><img class="card-img" src="graphics/sbtc_snap.png"></a>
+                    <h5 class="card-title">Card title #01 </h5>
+                    <img class="card-img" src="graphics/placeholder3.jpg">
                   </div>
                 </div>
                 <div class="col-md-4">
                    <div class="me">
-                    <h5 class="card-title">W. Howard and Sons Construction</h5>
-                    <a href="https://howardandsonsconstruction.squarespace.com" target="_blank"><img class="card-img" src="graphics/hsc_snap.png"></a>
+                    <h5 class="card-title">Card title #02</h5>
+                    <img class="card-img" src="graphics/placeholder3.jpg">
                   </div>
                 </div>
                 <div class="col-md-4">
                    <div class="me">
-                    <h5 class="card-title">Pope Francis Global Academy</h5>
-                    <a href="http://www.pfgacademy.org/" target="_blank"><img class="card-img" src="graphics/pfga_snap.png"></a>
+                    <h5 class="card-title">Card title #03</h5>
+                    <img class="card-img" src="graphics/placeholder3.jpg">
                   </div>
                 </div>
             </div>
@@ -81,41 +80,20 @@
             <div class="row">
                 <div class="col-md-4">
                   <div class="me">
-                    <h5 class="card-title">St. Mary Buffalo Grove</h5>
-                    <a href="https://stmarybg.squarespace.com" target="_blank"><img class="card-img" src="graphics/smbg_snap.png"></a>
+                    <h5 class="card-title">Card title #04 </h5>
+                    <img class="card-img" src="graphics/placeholder3.jpg">
                   </div>
                 </div>
                 <div class="col-md-4">
                    <div class="me">
-                    <h5 class="card-title">St. Francis de Sales</h5>
-                    <a href="http://www.stfrancislzparish.org/" target="_blank"><img class="card-img" src="graphics/sflz_snap.png"></a>
+                    <h5 class="card-title">Card title #05</h5>
+                    <img class="card-img" src="graphics/placeholder3.jpg">
                   </div>
                 </div>
                 <div class="col-md-4">
                    <div class="me">
-                    <h5 class="card-title">St. Cajetan</h5>
-                    <a href="https://www.stcajetan.org/" target="_blank"><img class="card-img" src="graphics/caj_snap.png"></a>
-                  </div>
-                </div>
-            </div>
-
-            <div class="row">
-                <div class="col-md-4">
-                  <div class="me">
-                    <h5 class="card-title">St. Patrick Wadsworth</h5>
-                    <a href="https://www.stpatrickwadsworth.org/" target="_blank"><img class="card-img" src="graphics/spw_snap.png"></a>
-                  </div>
-                </div>
-                <div class="col-md-4">
-                   <div class="me">
-                    <h5 class="card-title">St. Benedict</h5>
-                    <a href="http://parish.stbenedict.com/" target="_blank"><img class="card-img" src="graphics/stbens_snap.png"></a>
-                  </div>
-                </div>
-                <div class="col-md-4">
-                   <div class="me">
-                    <h5 class="card-title">St. Ita</h5>
-                    <a href="http://www.saintita.org/" target="_blank"><img class="card-img" src="graphics/ita_snap.png"></a>
+                    <h5 class="card-title">Card title #06</h5>
+                    <img class="card-img" src="graphics/placeholder3.jpg">
                   </div>
                 </div>
             </div>
@@ -126,26 +104,17 @@
         <div class="jumbotron">
            <h2>Request a Quote</h2>
             <div class="col-md-12">
-            <form class="form-style" role="form" action="<?= $_SERVER['PHP_SELF']; ?>" method="post">
+            <form class="form-style" role="form">
                 
               <div class="form-row form-group">
-                <div class="col">
-                  <input type="text" class="form-control form-control-lg" placeholder="First name" value="<?= $fname ?>">
-                  <span class="error"><?= $fname_error ?></span>
-                </div>
-                <div class="col">
-                  <input type="text" class="form-control form-control-lg" placeholder="Last name" value="<?= $lname ?>">
-                  <span class="error"><?= $lname_error ?></span>
-                </div>
+                <div class="col"><input type="text" class="form-control form-control-lg" placeholder="First name"></div>
+                <div class="col"><input type="text" class="form-control form-control-lg" placeholder="Last name"></div>
               </div>
 
-                <div class="form-group">
-                  <input type="text" class="form-control form-control-lg" placeholder="@" value="<?= $email ?>">
-                  <span class="error"><?= $email_error ?></span>
-                </div>
+                <div class="form-group"><input type="text" class="form-control form-control-lg" placeholder="@"/></div>
                 
                 <div class="form-group">
-                   <select id="inputState" class="form-control form-control-lg" value="<?= $reason ?>">
+                   <select id="inputState" class="form-control form-control-lg">
                     <option selected>Reason for contact?</option>
                     <option>Website</option>
                     <option>Social Media</option>
@@ -153,12 +122,9 @@
                   </select>
                   </div>
                 <div class="form-row ">
-                <div class="col-10">
-                  <textarea rows="3" placeholder="Add comment..." class="form-control form-control-lg" value="<?= $message ?>"></textarea>
-                </div>
+                <div class="col-10"><textarea rows="3" placeholder="Add comment..." class="form-control form-control-lg"></textarea></div>
                 <div class="col-2"><button  type="button" class="btn btn-primary btn-lg btn-block">SEND</button></div>
                 </div>
-                <div class="success"><?= $success; ?></div>
             </form>
         </div>
         </div>
@@ -171,6 +137,11 @@
         </div>
     </div> <!-- end mainContainer -->
 
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+<!--    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>-->
+    <!--<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous"></script>-->
     <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script> -->
     <script src="script/jquery.js" type="text/javascript"></script>
     <script src="script/bootstrap.min.js" type="text/javascript"></script>

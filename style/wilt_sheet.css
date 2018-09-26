@@ -4,9 +4,9 @@
 @font-face {font-family: EPF-LC; src: url(../graphics/epf_lc.ttf);}
 
 body{font-family:EPF-LC, sans-serif;background:#373B40;color:#fff;}
-.main{height: auto;margin-top:20px;/*background: url("../graphics/mcnair_typo.png") fixed repeat-x center/100% auto;*/}
+.main{height: auto;/*background: url("../graphics/mcnair_typo.png") fixed repeat-x center/100% auto;*/}
 
-header .navbar{/*display:none;*/}
+/*header .navbar{display:none;}
 /*.navbar-fixed-top{position:fixed;right:0;left:0;z-index:1030;}*/
 
 /* Styling */
@@ -17,28 +17,42 @@ header .navbar{/*display:none;*/}
 
 .jumbotron{border-radius:0 !important; /*padding:0 !important;*/ background:none;}
 
-#home h1{font-family:Fontin-Regular, sans-serif;font-size: 800%}
+#home .navbar{z-index:1030;background:#797c7f;}
+.navbar-brand{display:block;}
+
+.intro{display:none;}
+.intro h1{font-family:Fontin-Regular, sans-serif;font-size: 800%}
 
 #about h2{font-family:Fontin-Regular, sans-serif;}
 #about p{text-indent: 50px;}
 
 #portfolio h2{font-family:Fontin-Regular, sans-serif;}
-#portfolio .row{padding-bottom: 20px;}
+#portfolio .row{ padding-bottom: 20px;}
 
 #contact{font-family:Fontin-Regular, sans-serif;}
-#contact button{font-size: 1.4em;padding:0;}
+#contact button{font-size: 3em;padding:0;}
 .form-style .btn-block{height:100%;}
-.error{color:red;}
-.success{color:green;text-align: center;font-weight: bold;font-size: 14px;}
 
 #footer .jumbotron{font-family:sans-serif;margin-bottom: 0; background:#558D02;}
 
-/* Small devices (landscape phones, 576px and up)*/
-@media (max-width: 640px) {
-    #contact button{font-size: 3em;}
-} 
+/* Small devices (landscape phones, 576px and up) */
+@media (min-width: 640px) {
+	.intro{padding-top: 50px;display:block;}
+}
 
-/* Medium devices (tablets, 768px and up) 
-@media (min-width: 768px) { .main{background:yellow; } */
+/* Medium devices (tablets, 768px and up) */
+@media (min-width: 786px) {
+    #contact button{font-size: 1.4em;}
+    .navbar-brand{display:none;}
+}
+
+/* Large devices (desktops, 992px and up) */
+@media (min-width: 992px) { .main{background-size:620px 100%;}.cnum{display:block;} }
+
+/* Extra large devices (large desktops, 1200px and up) */ 
+@media (min-width: 1200px) { .main{background-size:740px 100%;} } 
 
 
+/* Syntax
+background: bg-color bg-image position/bg-size bg-repeat bg-origin bg-clip bg-attachment initial|inherit;
+*/
