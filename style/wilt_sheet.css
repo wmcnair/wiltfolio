@@ -19,12 +19,18 @@ body{font-family:EPF-LC, sans-serif;background:#373B40;color:#fff;}
 
 #home .navbar{z-index:1030;background:#797c7f;}
 .navbar-brand{display:block;}
+.navbar-brand img{width:50px;border-radius:30px;}
 
-.intro{display:none;}
+.intro{display:none;height:95vh;position: relative;}
+.intro .container-fluid{position:absolute;top:50%;margin-top:-50px;}
 .intro h1{font-family:Fontin-Regular, sans-serif;font-size: 800%}
 
+#about{background:#273B40;}
+#about .jumbotron .container{max-width:800px; width:100%;}
 #about h2{font-family:Fontin-Regular, sans-serif;}
-#about p{text-indent: 50px;}
+#about ul{list-style: none;}
+/* #about p{text-indent: 50px;} */
+
 
 #portfolio h2{font-family:Fontin-Regular, sans-serif;}
 #portfolio .row{ padding-bottom: 20px;}
@@ -37,7 +43,9 @@ body{font-family:EPF-LC, sans-serif;background:#373B40;color:#fff;}
 
 /* Small devices (landscape phones, 576px and up) */
 @media (min-width: 640px) {
-	.intro{padding-top: 50px;display:block;}
+    .intro{
+        padding-top: 50px;display:block;
+    }
 }
 
 /* Medium devices (tablets, 768px and up) */
